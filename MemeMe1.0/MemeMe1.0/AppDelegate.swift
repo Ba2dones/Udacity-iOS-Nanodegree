@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Picker
+//  MemeMe1.0
 //
 //  Created by Hassan Mostafa on 5/1/19.
 //  Copyright © 2019 Hassan Mostafa. All rights reserved.

@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5C04151D2279B38900CD4573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04151C2279B38900CD4573 /* AppDelegate.swift */; };
-		5C04151F2279B38900CD4573 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04151E2279B38900CD4573 /* ViewController.swift */; };
+		5C04151F2279B38900CD4573 /* CreateMemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C04151E2279B38900CD4573 /* CreateMemeVC.swift */; };
 		5C0415222279B38900CD4573 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0415202279B38900CD4573 /* Main.storyboard */; };
 		5C0415242279B38A00CD4573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C0415232279B38A00CD4573 /* Assets.xcassets */; };
 		5C0415272279B38A00CD4573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0415252279B38A00CD4573 /* LaunchScreen.storyboard */; };
 		5CB4C499227B4F5E007D0B78 /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CB4C498227B4F5E007D0B78 /* impact.ttf */; };
+		5CB4C49B227BC831007D0B78 /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB4C49A227BC831007D0B78 /* MemeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C0415192279B38900CD4573 /* MemeMe1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C04151C2279B38900CD4573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C04151E2279B38900CD4573 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C04151E2279B38900CD4573 /* CreateMemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemeVC.swift; sourceTree = "<group>"; };
 		5C0415212279B38900CD4573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C0415232279B38A00CD4573 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C0415262279B38A00CD4573 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C0415282279B38A00CD4573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CB4C498227B4F5E007D0B78 /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
+		5CB4C49A227BC831007D0B78 /* MemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				5C04151C2279B38900CD4573 /* AppDelegate.swift */,
-				5C04151E2279B38900CD4573 /* ViewController.swift */,
+				5C04151E2279B38900CD4573 /* CreateMemeVC.swift */,
 				5C0415202279B38900CD4573 /* Main.storyboard */,
 				5C0415232279B38A00CD4573 /* Assets.xcassets */,
 				5C0415252279B38A00CD4573 /* LaunchScreen.storyboard */,
 				5CB4C498227B4F5E007D0B78 /* impact.ttf */,
 				5C0415282279B38A00CD4573 /* Info.plist */,
+				5CB4C49A227BC831007D0B78 /* MemeModel.swift */,
 			);
 			path = MemeMe1.0;
 			sourceTree = "<group>";
@@ -139,7 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C04151F2279B38900CD4573 /* ViewController.swift in Sources */,
+				5C04151F2279B38900CD4573 /* CreateMemeVC.swift in Sources */,
+				5CB4C49B227BC831007D0B78 /* MemeModel.swift in Sources */,
 				5C04151D2279B38900CD4573 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
