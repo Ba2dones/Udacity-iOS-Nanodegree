@@ -61,13 +61,29 @@
 				5C04151C2279B38900CD4573 /* AppDelegate.swift */,
 				5C04151E2279B38900CD4573 /* CreateMemeVC.swift */,
 				5C0415202279B38900CD4573 /* Main.storyboard */,
-				5C0415232279B38A00CD4573 /* Assets.xcassets */,
 				5C0415252279B38A00CD4573 /* LaunchScreen.storyboard */,
-				5CB4C498227B4F5E007D0B78 /* impact.ttf */,
 				5C0415282279B38A00CD4573 /* Info.plist */,
-				5CB4C49A227BC831007D0B78 /* MemeModel.swift */,
+				5C0415232279B38A00CD4573 /* Assets.xcassets */,
+				5C39C2F42293AD84003A6A77 /* Models */,
+				5C39C2F32293AD6B003A6A77 /* Resources */,
 			);
 			path = MemeMe1.0;
+			sourceTree = "<group>";
+		};
+		5C39C2F32293AD6B003A6A77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CB4C498227B4F5E007D0B78 /* impact.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5C39C2F42293AD84003A6A77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5CB4C49A227BC831007D0B78 /* MemeModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

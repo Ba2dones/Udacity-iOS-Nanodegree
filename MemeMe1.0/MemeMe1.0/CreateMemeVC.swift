@@ -11,7 +11,7 @@ import UIKit
 class CreateMemeVC: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate {
     
-    // Outlet
+    // MARK: - Outlets
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -21,10 +21,10 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
-    // Helpers
+    // MARK: - Properties
     let imagePicker = UIImagePickerController()
     
-    // MARK: Meme Text Attributes
+    // MARK: - Meme Text Attributes
     let mememeTextAttributes: [NSAttributedString.Key: Any] = [
         .strokeColor: UIColor.black,
         .foregroundColor: UIColor.white,
@@ -53,7 +53,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         unsubscribeFromKeyboardNotifications()
     }
     
-    // MARK: TextField Setup
+    // MARK: - TextField Setup
     func setupTextFieldStyle(toTextField textField: UITextField) {
         textField.defaultTextAttributes = mememeTextAttributes
         textField.delegate = self
@@ -61,19 +61,19 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         textField.autocapitalizationType = .allCharacters
     }
     
-    // MARK: Album Picker
+    // MARK: - Album Picker
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
     
-    // MARK: Camera Picker
+    // MARK: - Camera Picker
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
     
-    // MARK: Image Picker Controller
+    // MARK: - Image Picker Controller
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imagePickerView.image = image
@@ -87,7 +87,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         cancelButton.isEnabled = imagePickerView.image != nil
     }
     
-    // MARK: TextField Editing
+    // MARK: - TextField Editing
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""
     }
@@ -97,7 +97,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         return true
     }
     
-    // MARK: KEYBOARD Mechanism
+    // MARK: - KEYBOARD Mechanism
     func subscribeToKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -126,7 +126,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         return keyboardSize.cgRectValue.height
     }
     
-    // MARK: Generate Memed Image
+    // MARK: - Generate Memed Image
     func generateMemedImage() -> UIImage {
         hideToolbars(true)
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -142,12 +142,12 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         self.navigationController?.isNavigationBarHidden = hide
     }
     
-    // MARK: Save Memed Image
+    // MARK: - Save Memed Image
     func save() {
         _ = MemeModel(memeTopText: topText.text!, memeBottomText: bottomText.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
     }
     
-    // MARK: Share Memed Image
+    // MARK: - Share Memed Image
     @IBAction func shareMeme(_ sender: Any) {
         let memedImage = generateMemedImage()
         let activityViewVC = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
@@ -162,14 +162,14 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         present(activityViewVC, animated: true, completion: nil)
     }
     
-    // MARK: Start Over
+    // MARK: - Start Over
     func start() {
         topText.text = "TOP"
         bottomText.text = "BOTTOM"
         imagePickerView.image = nil
     }
     
-    // MARK: Cansel Meme
+    // MARK: - Cansel Meme
     @IBAction func cancelMeme(_ sender: Any) {
         start()
         enableNavigationBarItems()

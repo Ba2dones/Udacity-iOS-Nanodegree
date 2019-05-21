@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-// MARK: Meme Model
+// MARK: - Meme Model
 struct MemeModel {
     var memeTopText: String
     var memeBottomText: String
